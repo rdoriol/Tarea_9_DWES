@@ -1,0 +1,241 @@
+:root {
+    --blanco: #ffffff;
+    --gris_oscuro: #202329;
+    --gris_medio: #272b33;
+    --gris_claro: #3c3e44;
+    --verde: #7efb62;
+    --azul: #00b0cb;
+    --llama: #f59622;
+   
+    --tipografiaHeader: 'Staatliches', cursive;
+    --tipografiaGenerica: 'Krub', sans-serif;  
+}
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--tipografiaGenerica);
+    background-color: var(--gris_medio);
+}
+* {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;    
+}
+
+ul {
+  list-style: none;  
+}
+
+img {
+    max-width: 100%;
+  }
+
+header {
+    text-align: center;
+   
+   margin-bottom: 70px;
+    
+}
+
+header h1 {
+    color: var(--blanco);
+}
+
+header a img {
+    width: 50%;
+}
+
+section {   
+   
+
+}
+
+section h2 {
+    text-align: center;
+    color: var(--verde);
+    font-family: var(--tipografiaHeader);
+    letter-spacing: 5px;
+    word-spacing: 20px;
+}
+
+section #subtitulo {
+    color: var(--azul);
+    padding: 15px;
+    width: 85%;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    font-size: 40px;
+    border: 1px solid var(--verde)
+}
+
+section #subtitulo:hover {    
+    background-color: var(--verde);
+    cursor: pointer;    
+}
+
+.grid_element h2:hover {
+    border-bottom: 1px solid var(--llama);
+    
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid_element {
+    background-color: var(--gris_claro);
+    border-radius: 10px;
+    width: 75%;    
+    height: 400px; 
+    box-shadow: 10px 10px 5px lightblue;
+    margin-bottom: 50px;
+}
+.grid_element h2 {
+    border-bottom: 1px solid lightblue;
+}
+
+.grid_element:hover, .grid_element img:hover {
+    box-shadow: 15px 15px 10px var(--llama);
+    cursor: pointer;
+    /*width: 80%;    
+    height: 410px;*/
+}
+
+.grid_element img {
+    float: left;
+    position: relative;
+    top: 90px;
+    left: 20px;
+    width: 200px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* -- WEB RESPONSIVE DESIGN-- */
+
+@media (max-width: 1209px) {
+    
+    .grid_element {       
+        height: 425px;       
+    }   
+}
+
+@media (max-width: 1091px) {
+    
+    .grid_element {       
+        height: 350px;
+        width: 50%;       
+    }   
+
+    .grid_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 906px) {
+    
+    .grid_element {       
+        height: 450px;
+        width: 50%;               
+    }     
+}
+
+@media (max-width: 802px) {
+    
+    .grid_element {       
+        height: 450px;
+        height: auto;
+        width: 50%;   
+        width: 100%;             
+    }
+
+    .grid_element img {
+        /*float: none;*/
+        position: relative;
+        top: 30px;
+        /*left: 90px;*/        
+        width: 200px;
+        height: 220px;
+        border-radius: 10px;
+    }
+    
+   
+
+   
+}
+
+@media (max-width: 575px) {
+    .grid_element img {
+        float: none;
+        position: relative;
+        /*top: 30px; */
+        
+        left: 0px;        
+        width: 200px;
+        height: 220px;
+        border-radius: 10px;
+        
+    }
+    #centrar_imagen {
+        text-align: center; 
+    }
+
+    .grid_element .caja_listado ul {
+        width: 100%;
+        
+    }
+
+    .grid_element .caja_listado ul li {
+        position: relative;
+        right: 150px;
+        
+    }
+}
+
+/* -- FIN RESPONSIVE DISEGN WEB -- */
+
+.grid_element h2 {
+   text-align: center;
+   margin-top: 40px;
+}
+
+.grid_element .caja_listado ul {
+    margin-top: 30px;    
+}
+
+.grid_element .caja_listado ul li {
+    text-align: left;
+    margin-left: 50%;
+    line-height: 30px;
+    color: var(--verde);
+    font-weight: bold;    
+}
+
+.grid_element .caja_listado ul li span {
+    color: var(--azul);
+    font-weight: 100;
+}
+
+footer {
+    background-color: var(--gris_oscuro);
+    padding: 30px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+footer h2 {
+    color: var(--verde);
+    font-weight: bold;
+}
